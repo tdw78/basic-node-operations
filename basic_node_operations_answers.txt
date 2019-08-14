@@ -1,0 +1,36 @@
+Questions
+
+1) Run the commands sort, wc and uniq on the commands.js file. Explain how they work 
+   and what the output was.
+
+    The command `wc` outputs the number of lines, words and characters contained in 
+    the file.  For the commands.js file, the output was: 41  116 1132 commands.js.
+    The `sort` command outputs the file sorted alphabetically by line. The output was the
+    commands.js file in alphabetical order.
+    The `uniq` command outputs the file with all adjacent duplicate lines removed. 
+    The output was the contents of the commands.js file with all adjacent duplicate
+    lines removed.
+
+2) Using the pipe (|) connect at least two commands and run it on commands.js. 
+   Explain what the output was and why the specific data was outputted.
+
+    - I ran the command `sort commands.js | uniq`. First the file was sorted
+      alphabetically and then all adjacent duplicates were removed.  A clear example
+      of this is, when I first ran sort on commands.js, the two `break;`s displayed
+      on lines 6 and 7.  When I ran sort and uniq with the pipe connect, only one
+      `break;` is displayed on line 6.
+
+6) 
+    function reverseString(string) {
+      let array = [] 
+      let splitString = string.split(' ')
+ 
+      splitString.forEach((word) => {
+        let splitWord = word.split('')
+        let reversedWord = splitWord.reverse()
+        let newWord = reversedWord.join('')
+        array.push(newWord)
+    })
+       let finalResult = array.join(' ')
+       return finalResult
+   }
